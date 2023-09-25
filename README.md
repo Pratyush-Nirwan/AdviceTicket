@@ -12,14 +12,14 @@ The "Advice Ticket" is a web application that provides users with random pieces 
 
 ## Demo
 
-You can see a live demo of the "Advice Ticket" [here](link_to_live_demo).
+You can see a live demo of the "Advice Ticket" [here](http://pcoder.me/AdviceTicket/).
 
 ## Installation
 
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/your-username/advice-ticket.git
+    git clone https://github.com/Pratyush-Nirwan/AdviceTicket    
     ```
 2. Navigate to the project directory:
 
