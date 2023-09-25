@@ -1,5 +1,5 @@
 # Advice Ticket
-![Screenshot 1](/Screenshot%20(28).png)
+![Alt text](Screenshot.png)
 ## Description
 
 The "Advice Ticket" is a web application that provides users with random pieces of advice. It generates a unique advice number and a QR code for each piece of advice, making it a fun and interactive way to discover helpful insights.
