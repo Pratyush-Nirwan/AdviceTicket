@@ -24,7 +24,7 @@ You can see a live demo of the "Advice Ticket" [here](http://pcoder.me/AdviceTic
 2. Navigate to the project directory:
 
     ```bash
-    cd advice-ticket
+    cd aAdviceTicket
     ```
 3. Open the index.html file in your web browser.
 
