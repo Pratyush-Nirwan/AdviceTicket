@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap');
+
+* {
+    font-family: 'Martian Mono', monospace;
+}
+
+hr {
+    border: 1px solid #ffd100;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #d4a373;
+    animation: fadeIn ease 1s;
+    margin: 0;
+    padding: 0;
+}
+
+#ticket {
+    display: flex;
+    min-height: 350px;
+    flex-direction: row;
+    max-width: 50%;
+}
+
+#ticket-left {
+    box-shadow: 10px 10px black;
+    background-color: #333533;
+    color: #ffd100;
+    position: relative;
+    border: 3px solid black;
+    border-right: 0px;
+    border-radius: 20px;
+    padding: 2em;
+    min-width: 60%;
+}
+#ticket-left::after {
+    content: '';
+    position: absolute;
+    top: 2px; /* Adjust this value to control the gap between border and corners */
+    right: 2px; /* Adjust this value to control the gap between border and corners */
+    bottom: 2px; /* Adjust this value to control the gap between border and corners */
+    left: 2px; /* Adjust this value to control the gap between border and corners */
+    border-radius: 18px; /* Adjust this value to match the card's border-radius minus border width */
+    border: 2px solid #ffd100; /* Match the border style and color */
+  }
+
+#ticket-right {
+    box-shadow: 10px 10px black;
+    background-color: #333533;
+    color: #ffd100;
+    position: relative;
+    border: 3px solid black;
+    border-left: 3px dashed black;
+    border-radius: 20px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#ticket-left *,
+#ticket-right * {
+    animation: fadeIn ease 2s;
+}
+
+#qr-credit,
+#advice-credit {
+    font-size: 0.5em;
+}
+
+#advice-credit {
+    position: absolute;
+    bottom: 20px;
+}
+
+#advice-number {
+    font-size: 0.8em;
+}
+
+#date-time-div {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    padding-bottom: 3em;
+}
+
+#time {
+    padding-right: 20px;
+}
+
+#date {
+    padding-left: 20px;
+}
+
+#scissors {
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 25px;
+    left: -13px;
+    font-size: 1.5em;
+}
+
+#github {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#github a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #ffd100;
+    font-size: 75px;
+}
+
+#github p {
+    padding: 0;
+    margin: 0;
+    font-size: 10px
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        overflow: hidden;
+    }
+    #ticket {
+        position: absolute;
+        top: 20%;
+        min-height: none;
+        max-width: none;
+        width: 75vh;
+    }
+}
+/*created by pratyush with ♡
