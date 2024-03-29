@@ -10,7 +10,6 @@ const Ticket = () => {
     let { id } = useParams();
     const [advice, setAdvice] = useState("");
     const [linkCopied, setLinkCopied] = useState(false);
-    const [loading, setLoading] = useState(true); // Add loading state
 
     useEffect(() => {
         if (id) {
@@ -28,7 +27,6 @@ const Ticket = () => {
                             localStorage.setItem('prevAdvice', id);
                             setAdvice("No advice found. Please refresh.");
                         }
-                        setLoading(false); // Set loading to false after fetching advice
                     });
             }
         } else {
@@ -60,9 +58,6 @@ const Ticket = () => {
     const formattedDate = month + ' ' + day + ' ' + year;
     const formattedTime = `${hours}:${minutes}:${seconds} ${amPm}`;
 
-    if (loading) {
-        return <div>Loading...</div>; // Render loading indicator
-    }
 
     return (
         <>
@@ -109,3 +104,6 @@ const Ticket = () => {
 }
 
 export default Ticket;
+
+
+//created by pratyush nirwan
