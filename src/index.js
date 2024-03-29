@@ -6,6 +6,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+console.log.apply(console, ["%c Designed and Coded by Pratyush Nirwan ", "color: black; background: #ff6600; padding:5px 0; border-radius: 5px; font-weight: bold",]);
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -14,7 +16,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
