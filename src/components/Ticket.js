@@ -14,7 +14,7 @@ const Ticket = () => {
     useEffect(() => {
         console.log('pass1')
         if (id) {
-            if (localStorage.getItem('prevAdvice') === id) {
+            if (sessionStorage.getItem('prevAdvice') === id) {
                 id = Math.floor(Math.random() * 224) + 1;
                 navigate('/advice/' + id);
                 console.log('pass6')
@@ -25,11 +25,11 @@ const Ticket = () => {
                             console.log('pass3')
 
                             setAdvice(data.slip.advice);
-                            localStorage.setItem('prevAdvice', id);
+                            sessionStorage.setItem('prevAdvice', id);
                         } else {
                             console.log('pass4')
 
-                            localStorage.setItem('prevAdvice', id);
+                            sessionStorage.setItem('prevAdvice', id);
                             setAdvice("No advice found. Please refresh.");
                         }
                     });
@@ -43,11 +43,11 @@ const Ticket = () => {
                             console.log('pass3')
 
                             setAdvice(data.slip.advice);
-                            localStorage.setItem('prevAdvice', id);
+                            sessionStorage.setItem('prevAdvice', id);
                         } else {
                             console.log('pass4')
 
-                            localStorage.setItem('prevAdvice', id);
+                            sessionStorage.setItem('prevAdvice', id);
                             setAdvice("No advice found. Please refresh.");
                         }
                     });
