@@ -12,19 +12,24 @@ const Ticket = () => {
     const [linkCopied, setLinkCopied] = useState(false);
 
     useEffect(() => {
+        console.log('pass1')
         if (id) {
             if (localStorage.getItem('prevAdvice') === id) {
                 id = Math.floor(Math.random() * 224) + 1;
                 navigate('/advice/' + id);
             } else {
-                console.log('fetched')
+                console.log('pass2')
                 fetch('https://api.adviceslip.com/advice/' + id)
                     .then(response => response.json())
                     .then(data => {
                         if (data.slip) {
+                            console.log('pass3')
+
                             setAdvice(data.slip.advice);
                             localStorage.setItem('prevAdvice', id);
                         } else {
+                            console.log('pass4')
+
                             localStorage.setItem('prevAdvice', id);
                             setAdvice("No advice found. Please refresh.");
                         }
@@ -32,7 +37,7 @@ const Ticket = () => {
             }
         } else {
 
-            console.log('fetched')
+            console.log('pass5')
 
             fetch('https://api.adviceslip.com/advice')
                 .then(response => response.json())

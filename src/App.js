@@ -1,7 +1,6 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Ticket from './components/Ticket';
 import './App.css';
-import { useEffect } from 'react';
 const App = () => {
   let id = Math.floor(Math.random() * 224) + 1;
   return (
