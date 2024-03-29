@@ -18,6 +18,21 @@ const Ticket = () => {
                 id = Math.floor(Math.random() * 224) + 1;
                 navigate('/advice/' + id);
                 console.log('pass6')
+                fetch('https://api.adviceslip.com/advice/' + id)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.slip) {
+                            console.log('pass3')
+
+                            setAdvice(data.slip.advice);
+                            localStorage.setItem('prevAdvice', id);
+                        } else {
+                            console.log('pass4')
+
+                            localStorage.setItem('prevAdvice', id);
+                            setAdvice("No advice found. Please refresh.");
+                        }
+                    });
 
             } else {
                 console.log('pass2')
