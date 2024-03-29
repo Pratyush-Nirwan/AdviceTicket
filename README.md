@@ -76,7 +76,7 @@ npm start
 
 ## 📄 License
 
-This project is protected under the MIT License with Attribution Clause. For more details, refer to the [LICENCE](LICENCE) file
+This project is protected under the  GNU GENERAL PUBLIC LICENSE. For more details, refer to the [LICENCE](LICENCE) file
 
 ## 👏 Acknowledgments
 
