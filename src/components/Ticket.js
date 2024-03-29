@@ -17,6 +17,8 @@ const Ticket = () => {
             if (localStorage.getItem('prevAdvice') === id) {
                 id = Math.floor(Math.random() * 224) + 1;
                 navigate('/advice/' + id);
+                console.log('pass6')
+
             } else {
                 console.log('pass2')
                 fetch('https://api.adviceslip.com/advice/' + id)
