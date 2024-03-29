@@ -17,6 +17,7 @@ const Ticket = () => {
                 id = Math.floor(Math.random() * 224) + 1;
                 navigate('/advice/' + id);
             } else {
+                console.log('fetched')
                 fetch('https://api.adviceslip.com/advice/' + id)
                     .then(response => response.json())
                     .then(data => {
@@ -30,6 +31,9 @@ const Ticket = () => {
                     });
             }
         } else {
+
+            console.log('fetched')
+
             fetch('https://api.adviceslip.com/advice')
                 .then(response => response.json())
                 .then(data => {
